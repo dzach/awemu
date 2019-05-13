@@ -2,8 +2,8 @@ proc rotateToplevel {W deg args} {
 	# rotate a toplevel window around a center point
 	#	x' = x cos(a) - y sin(a), y' = x sin(a) + y cos(a)
 	if {$deg == 0} return
-	# set default values
-	array set o {-deg0 0	-center {}}
+	# set default values. -deg0 is the previous rotation value.
+	array set o {-deg0 0 -center {}}
 	# merge defaults with user options
 	array set o $args
 	# make sure we have the toplevel
