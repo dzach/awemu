@@ -36,7 +36,7 @@ rotate .t 90 -center {520 420}
 rotate .t 90 -center {520 420}
 rotate .t 90 -center {520 420}
 ```
-Example for a toolbar keeping the sort side, top or right:
+Example of a frame keeping the sort side, top or right:
 ```
 # continue from above:
 
