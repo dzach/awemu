@@ -22,8 +22,11 @@ rotateToplevel .t -90 -center {520 420}
 ```
 Rotation is in 90deg increments, but is not incremental. Last rotation can be supplied as ```-deg0 <last rotation>``` to create an incremental rotation effect. 
 
-Example for clockwise incremental rotation:
+Example for clockwise incremental rotation. Frame is kept on top:
 ```
+toplevel .t
+wm geometry .t 240x440+400+300
+pack [frame .t.f -width 40 -height 40 -background red] -side top -fill x -padx 5 -pady 5
 proc rotate {W deg args} {
   rotateToplevel $W $deg -deg0 $::deg0 {*}$args
 }
@@ -33,5 +36,18 @@ rotate .t 90 -center {520 420}
 rotate .t 90 -center {520 420}
 rotate .t 90 -center {520 420}
 ```
+Example for a toolbar keeping the sort side, top or right:
+```
+# continue from above:
 
+bind .t <<ViewportUpdate>> {
+  if {[winfo width .t] > [winfo height .t]} {
+    pack .t.f -side right -fill y
+  } else {
+    pack .t.f -side top -fill x
+  }
+}
+rotate .t 90 -center {520 420}
+rotate .t 90 -center {520 420}
+```
 More to come...
