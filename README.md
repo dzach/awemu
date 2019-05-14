@@ -3,6 +3,6 @@ A screen emulator for android devices, written in TCL.
 
 Still in pre-alpha state.
 
-![](https://github.com/dzach/awemu/blob/master/awemu.gif)
+![AWhelper on awemu](https://github.com/dzach/awhelper/blob/master/awhelper.gif)
 
 More to come...
