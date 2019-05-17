@@ -36,6 +36,8 @@ rotate .t 90 -center {520 420}
 rotate .t 90 -center {520 420}
 rotate .t 90 -center {520 420}
 ```
+![rotateToplevel](https://github.com/dzach/awemu/blob/master/rotateToplevel.gif)
+
 Example of a frame keeping the sort side, top or right:
 ```
 # continue from above:
@@ -50,4 +52,6 @@ bind .t <<ViewportUpdate>> {
 rotate .t 90 -center {520 420}
 rotate .t 90 -center {520 420}
 ```
+![rotateToplevel1](https://github.com/dzach/awemu/blob/master/rotateToplevel-1.gif)
+
 More to come...
